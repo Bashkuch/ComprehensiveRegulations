@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>آیین‌نامه مرکز اقتصادی بشکوچ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+      body {
+        font-family: "Vazirmatn", sans-serif;
+        background-color: #0f0a0a;
+        color: #e2e8f0;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #1a110e 0%, #0f0a0a 100%);
+      }
+
+      .section-card {
+        background: rgba(15, 10, 10, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .section-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        border-color: rgba(212, 175, 55, 0.4);
+      }
+
+      .highlight {
+        position: relative;
+        z-index: 1;
+      }
+
+      .highlight::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 30%;
+        background-color: rgba(212, 175, 55, 0.3);
+        z-index: -1;
+        border-radius: 4px;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: #d4af37;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .scroll-indicator {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1a110e;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #d4af37;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #c9a227;
+      }
+
+      .gold-text {
+        color: #d4af37;
+      }
+
+      .gold-bg {
+        background-color: #d4af37;
+      }
+
+      .gold-border {
+        border-color: #d4af37;
+      }
+
+      .gold-hover:hover {
+        color: #d4af37;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen gradient-bg">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 bg-black/80 backdrop-blur-md shadow-lg border-b border-gray-800"
+    >
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2 space-x-reverse">
+          <div
+            class="w-10 h-10 rounded-full gold-bg flex items-center justify-center"
+          >
+            <img src="./123.jpg" alt="bashkuch_org" />
+          </div>
+          <h1 class="text-xl font-bold text-white">مرکز اقتصادی بشکوچ</h1>
+        </div>
+
+        <nav class="hidden md:flex space-x-8 space-x-reverse">
+          <a
+            href="#intro"
+            class="nav-link text-gray-300 hover:text-white gold-hover"
+            >معرفی</a
+          >
+          <a
+            href="#regulations"
+            class="nav-link text-gray-300 hover:text-white gold-hover"
+            >آیین‌نامه</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-300 hover:text-white gold-hover"
+            >تماس</a
+          >
+        </nav>
+
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-300 hover:text-white focus:outline-none gold-hover"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-black/95 px-4 py-2 border-t border-gray-800"
+      >
+        <div class="flex flex-col space-y-3">
+          <a
+            href="#intro"
+            class="nav-link text-gray-300 hover:text-white py-2 gold-hover"
+            >معرفی</a
+          >
+          <a
+            href="#regulations"
+            class="nav-link text-gray-300 hover:text-white py-2 gold-hover"
+            >آیین‌نامه</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-300 hover:text-white py-2 gold-hover"
+            >تماس</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="intro" class="relative py-20 px-4">
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent"
+        ></div>
+        <div
+          class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/20 to-transparent"
+        ></div>
+      </div>
+
+      <div class="container mx-auto relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="flex justify-center">
+            <img src="./123.jpg" alt="bashkuch_org" width="150px" class="rounded-xl  m-5"  />
+          </div>
+          <h1
+            class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+          >
+            آیین‌نامه جامع <span class="gold-text">مرکز اقتصادی بشکوچ</span>
+          </h1>
+          <p class="text-xl text-gray-300 mb-8">
+            مجموعه‌ای از قوانین و مقررات برای ایجاد محیطی منظم، ایمن و رشدآفرین
+            برای تمامی اعضا و کسب‌وکارهای وابسته
+          </p>
+
+          <div class="flex justify-center space-x-4 space-x-reverse">
+            <a
+              href="#regulations"
+              class="gold-bg hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              مطالعه آیین‌نامه
+              <i class="fas fa-arrow-down mr-2"></i>
+            </a>
+            <a
+              href="#contact"
+              class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg border border-gray-700"
+            >
+              ارتباط با ما
+              <i class="fas fa-envelope mr-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center scroll-indicator">
+          <a
+            href="#regulations"
+            class="text-gray-400 hover:text-white gold-hover"
+          >
+            <i class="fas fa-chevron-down text-2xl animate-bounce"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regulations Section -->
+    <section id="regulations" class="py-16 px-4">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-white mb-4">
+            <span class="highlight">مقررات و آیین‌نامه مرکز</span>
+          </h2>
+          <div class="w-24 h-1 gold-bg mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Article 1 -->
+          <div class="section-card rounded-xl p-6 shadow-xl">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 ml-2 ml-2 rounded-full bg-black/30 flex items-center justify-center mr-4 border gold-border"
+              >
+                <i class="fas fa-bullseye gold-text text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">ماده ۱ – هدف و رسالت</h3>
+            </div>
+            <p class="text-gray-300">
+              مرکز اقتصادی بشکوچ با هدف ایجاد بستر همکاری منسجم، توسعه
+              فعالیت‌های اقتصادی سالم، و ارتقای سطح همکاری میان اعضا و
+              کسب‌وکارهای وابسته تأسیس شده است. کلیه فعالیت‌ها و تصمیمات باید در
+              راستای تأمین منافع مشترک و رشد پایدار اعضا انجام پذیرد.
+            </p>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="section-card rounded-xl p-6 shadow-xl">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 ml-2 ml-2 rounded-full bg-black/30 flex items-center justify-center mr-4 border gold-border"
+              >
+                <i class="fas fa-user-plus gold-text text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">ماده ۲ – شرایط عضویت</h3>
+            </div>
+            <ul class="text-gray-300 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-building gold-text mt-1 ml-2"></i>
+                هر کسب‌وکار متقاضی ملزم به واگذاری ۵۰٪ سهم مشارکت
+                اقتصادی/تبلیغاتی به مرکز است.
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle gold-text mt-1 ml-2"></i>
+                عضویت منوط به تأیید صلاحیت حرفه‌ای و اخلاقی توسط شورای ارزیابی
+                است.
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-file-alt gold-text mt-1 ml-2"></i>
+                رعایت مقررات مصوب مرکز برای تمام اعضا الزامی است.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="section-card rounded-xl p-6 shadow-xl">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 ml-2 ml-2 rounded-full bg-black/30 flex items-center justify-center mr-4 border gold-border"
+              >
+                <i class="fas fa-users gold-text text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">
+                ماده ۳ – شورای ارزیابی
+              </h3>
+            </div>
+            <ul class="text-gray-300 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-user-tie gold-text mt-1 ml-2"></i>
+                شورا از اعضای واجد شرایط با سابقه و تخصص کافی تشکیل می‌شود.
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-balance-scale gold-text mt-1 ml-2"></i>
+                تصمیمات مبتنی بر شایسته‌سالاری و با در نظر گرفتن سابقه و شایستگی
+                حرفه‌ای است.
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-tasks gold-text mt-1 ml-2"></i>
+                وظایف: ارزیابی عضویت، رسیدگی به تخلفات، بازنگری مقررات.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Article 4 -->
+          <div class="section-card rounded-xl p-6 shadow-xl">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 ml-2 ml-2 rounded-full bg-black/30 flex items-center justify-center mr-4 border gold-border"
+              >
+                <i class="fas fa-award gold-text text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">
+                ماده ۴ – اصول شایسته‌سالاری
+              </h3>
+            </div>
+            <ul class="text-gray-300 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-trophy gold-text mt-1 ml-2"></i>
+                تصمیمات بر اساس تجربه و توانمندی اتخاذ می‌شود.
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-ban gold-text mt-1 ml-2"></i>
+                پرهیز از تصمیم‌گیری متعصبانه یا تبعیض‌آمیز.
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-hand-holding-heart gold-text mt-1 ml-2"></i>
+                رعایت انصاف، بی‌طرفی و عدالت در تمام مراحل.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Article 5 -->
+          <div class="section-card rounded-xl p-6 shadow-xl">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 ml-2 rounded-full bg-black/30 flex items-center justify-center mr-4 border gold-border"
+              >
+                <i class="fas fa-heart gold-text text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">
+                ماده ۵ – الزامات اخلاقی
+              </h3>
+            </div>
+            <ul class="text-gray-300 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-heart gold-text mt-1 ml-2"></i>
+                احترام کامل به همه اعضا بدون توجه به تفاوت‌ها.
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-comment-slash gold-text mt-1 ml-2"></i>
+                پرهیز از توهین، تهدید یا خشونت کلامی/رفتاری.
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-search gold-text mt-1 ml-2"></i>
+                تعهد به صداقت، شفافیت و رعایت قوانین کشور.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Article 6 -->
+          <div class="section-card rounded-xl p-6 shadow-xl">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 ml-2 rounded-full bg-black/30 flex items-center justify-center mr-4 border gold-border"
+              >
+                <i class="fas fa-exclamation-triangle gold-text text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white">ماده ۶ – مقررات ویژه</h3>
+            </div>
+            <div class="text-gray-300 space-y-3">
+              <p>رفتارهای زیر غیرقابل قبول است:</p>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <i class="fas fa-fist-raised gold-text mt-1 ml-2"></i>
+                  خشونت، تهدید یا زبان خشونت‌آمیز
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-comment-dots gold-text mt-1 ml-2"></i>
+                  استفاده از القاب توهین‌آمیز
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-eye-slash gold-text mt-1 ml-2"></i>
+                  ارسال محتوای نامناسب (NSFW)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Regulations Button -->
+        <div class="mt-16 text-center">
+          <button
+            id="show-all-btn"
+            class="bg-black/70 hover:bg-black/80 text-white px-8 py-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg border border-gray-800"
+          >
+            مشاهده کامل آیین‌نامه
+            <i class="fas fa-book-open ml-2 gold-text"></i>
+          </button>
+        </div>
+
+        <!-- Full Regulations Modal -->
+        <div
+          id="full-regulations-modal"
+          class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+        >
+          <div
+            class="bg-black rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto p-6 relative border border-gray-800"
+          >
+            <button
+              id="close-modal-btn"
+              class="absolute top-4 left-4 text-gray-400 hover:text-white gold-hover"
+            >
+              <i class="fas fa-times text-2xl"></i>
+            </button>
+
+            <div class="text-center mb-8">
+              <h2 class="text-2xl font-bold text-white mb-2">
+                آیین‌نامه کامل مرکز اقتصادی بشکوچ
+              </h2>
+              <div class="w-20 h-1 gold-bg mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-8 text-gray-300">
+              <!-- Article 1 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۱</span
+                  >
+                  ماده ۱ – هدف و رسالت
+                </h3>
+                <p>
+                  مرکز اقتصادی بشکوچ با هدف ایجاد بستر همکاری منسجم، توسعه
+                  فعالیت‌های اقتصادی سالم، و ارتقای سطح همکاری میان اعضا و
+                  کسب‌وکارهای وابسته تأسیس شده است. کلیه فعالیت‌ها و تصمیمات
+                  باید در راستای تأمین منافع مشترک و رشد پایدار اعضا انجام
+                  پذیرد.
+                </p>
+              </div>
+
+              <!-- Article 2 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۲</span
+                  >
+                  ماده ۲ – شرایط عضویت و همکاری کسب‌وکارها
+                </h3>
+                <ol class="list-decimal pr-5 space-y-3">
+                  <li>
+                    هر کسب‌وکار متقاضی استفاده از تبلیغات و امکانات مرکز، ملزم
+                    به واگذاری ۵۰٪ سهم مشارکت اقتصادی/تبلیغاتی خود به مرکز خواهد
+                    بود.
+                  </li>
+                  <li>
+                    عضویت کسب‌وکارها منوط به بررسی و تأیید صلاحیت حرفه‌ای و
+                    اخلاقی توسط شورای ارزیابی است.
+                  </li>
+                  <li>
+                    کلیه کسب‌وکارها و اعضا موظف به رعایت مقررات مصوب مرکز
+                    می‌باشند.
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Article 3 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۳</span
+                  >
+                  ماده ۳ – شورای ارزیابی
+                </h3>
+                <ol class="list-decimal pr-5 space-y-3">
+                  <li>
+                    شورا از اعضای واجد شرایط با سابقه و تخصص کافی تشکیل می‌شود.
+                  </li>
+                  <li>
+                    تصمیمات شورا مبتنی بر شایسته‌سالاری و در نظر گرفتن موارد زیر
+                    است:
+                    <ul class="list-disc pr-5 mt-2 space-y-2">
+                      <li>قدمت و سابقه عضویت</li>
+                      <li>میزان دانش، تجربه و شایستگی حرفه‌ای</li>
+                    </ul>
+                  </li>
+                  <li>
+                    وظایف شورا:
+                    <ul class="list-disc pr-5 mt-2 space-y-2">
+                      <li>ارزیابی و پذیرش یا رد درخواست‌های عضویت</li>
+                      <li>رسیدگی به تخلفات اعضا و صدور رأی لازم</li>
+                      <li>
+                        بازنگری و تصویب تغییرات آیین‌نامه‌ها و مقررات داخلی
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Article 4 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۴</span
+                  >
+                  ماده ۴ – اصول شایسته‌سالاری
+                </h3>
+                <ol class="list-decimal pr-5 space-y-3">
+                  <li>تصمیمات بر اساس ترکیب تجربه و توانمندی اتخاذ می‌شود.</li>
+                  <li>
+                    شورا از تصمیم‌گیری متعصبانه، تبعیض‌آمیز یا مبتنی بر روابط
+                    شخصی پرهیز می‌کند.
+                  </li>
+                  <li>
+                    رعایت انصاف، بی‌طرفی و عدالت در تمام مراحل الزامی است.
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Article 5 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۵</span
+                  >
+                  ماده ۵ – الزامات اخلاقی و رفتاری عمومی
+                </h3>
+                <p class="mb-3">
+                  کلیه اعضا و کسب‌وکارهای وابسته موظف به رعایت اصول اخلاقی زیر
+                  هستند:
+                </p>
+                <ol class="list-decimal pr-5 space-y-3">
+                  <li>
+                    احترام کامل به همه اعضا بدون توجه به نژاد، قومیت، مذهب،
+                    جنسیت و باورهای شخصی.
+                  </li>
+                  <li>پرهیز از توهین، تهدید، خشونت کلامی یا رفتاری.</li>
+                  <li>تعهد به صداقت، شفافیت و رعایت قوانین کشور.</li>
+                  <li>تلاش برای تأمین منافع جمعی مرکز و منافع ملی.</li>
+                </ol>
+              </div>
+
+              <!-- Article 6 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۶</span
+                  >
+                  ماده ۶ – مقررات ویژه رفتاری در جامعه مرکز
+                </h3>
+                <p class="mb-3">
+                  رفتارهای زیر آزار و اذیت محسوب شده و غیرقابل قبول است:
+                </p>
+                <ol class="list-decimal pr-5 space-y-3">
+                  <li>خشونت، تهدید به خشونت یا زبان خشونت‌آمیز علیه دیگران.</li>
+                  <li>استفاده از القاب توهین‌آمیز برای افراد یا گروه‌ها.</li>
+                  <li>ارسال محتوای نامناسب یا جنسی صریح (NSFW).</li>
+                  <li>انتشار اطلاعات شخصی بدون رضایت.</li>
+                  <li>
+                    توهین یا نفرت‌پراکنی بر اساس جنسیت، نژاد, مذهب یا ناتوانی.
+                  </li>
+                  <li>مزاحمت یا توجه جنسی نامطلوب.</li>
+                  <li>ارسال یا درخواست محتوای مشمول حق نشر (کپی‌رایت).</li>
+                  <li>ارسال هرزنامه (Spam).</li>
+                  <li>پیام دادن بدون رضایت قبلی.</li>
+                  <li>
+                    ایجاد بحث‌های حساسیت‌برانگیز در موضوعات عقیدتی و سیاسی.
+                  </li>
+                  <li>حمایت یا تشویق رفتارهای فوق.</li>
+                  <li>
+                    ارسال پیام خصوصی با هدف مزاحمت، آزار, کلاهبرداری یا اخاذی.
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Article 6.1 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۶.۱</span
+                  >
+                  ماده ۶.۱ – الزامات ویژه امنیتی و حفاظتی
+                </h3>
+                <ol class="list-decimal pr-5 space-y-3">
+                  <li>
+                    هرگونه ارتباط یا معامله خارج از چارچوب مرکز بدون اطلاع قبلی
+                    به مدیریت یا شورا فاقد اعتبار است و مسئولیت آن بر عهده فرد
+                    است.
+                  </li>
+                  <li>
+                    پیش از هر اقدام حساس یا معامله مشکوک، مشورت با حداقل سه عضو
+                    مطلع و باتجربه الزامی است.
+                  </li>
+                  <li>
+                    منافع مرکز در اولویت مطلق است و هر فرد یا کسب‌وکاری که به آن
+                    آسیب برساند یا باعث تنش شود، حذف و در لیست سیاه قرار
+                    می‌گیرد.
+                  </li>
+                  <li>
+                    قرارگیری در لیست سیاه به معنای قطع تمامی خدمات و تسهیلات
+                    فعلی و آتی است.
+                  </li>
+                  <li>
+                    اطلاعات داخلی مرکز محرمانه است و افشا یا سوءاستفاده از آن
+                    ممنوع بوده و موجب اخراج خواهد شد.
+                  </li>
+                  <li>
+                    تخلفات سنگین مانند جاسوسی یا نقض عمدی منافع مرکز قابل پیگرد
+                    قانونی بوده و با اخراج فوری همراه است.
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Article 7 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۷</span
+                  >
+                  ماده ۷ – دستورالعمل‌های رفتاری جامعه
+                </h3>
+                <ol class="list-decimal pr-5 space-y-3">
+                  <li>
+                    مهربان، مؤدب، صمیمی و حرفه‌ای باشید و از بی‌احترامی و خشونت
+                    پرهیز کنید.
+                  </li>
+                  <li>گفتگو را در بخش و موضوع مناسب انجام دهید.</li>
+                  <li>
+                    از ارسال یک مطلب در چند موضوع به صورت همزمان خودداری کنید.
+                  </li>
+                  <li>
+                    به تفاوت نظرها احترام بگذارید و فضای گفتگو را سالم نگه
+                    دارید.
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Article 8 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۸</span
+                  >
+                  ماده ۸ – رسیدگی به تخلفات و ضمانت اجرا
+                </h3>
+                <ol class="list-decimal pr-5 space-y-3">
+                  <li>تخلفات توسط شورای ارزیابی بررسی می‌شود.</li>
+                  <li>
+                    روند برخورد:
+                    <ul class="list-disc pr-5 mt-2 space-y-2">
+                      <li>
+                        تا سه مرتبه تخلف: هر بار اخطار رسمی و کاهش درجه/رتبه فرد
+                        یا کسب‌وکار.
+                      </li>
+                      <li>
+                        پس از سه بار تخلف: در تخلف چهارم به بعد، بدون اخطار
+                        جدید، اخراج از مرکز و گروه‌های وابسته.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    افراد یا کسب‌وکارهای اخراج‌شده در صورت تمایل به بازگشت،
+                    می‌توانند درخواست دهند که با اجماع شورای ارزیابی و شورای
+                    موسسان بررسی و تصمیم‌گیری می‌شود.
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Article 9 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۹</span
+                  >
+                  ماده ۹ – هدف نهایی
+                </h3>
+                <p>
+                  این آیین‌نامه برای ایجاد محیطی منظم، ایمن، حمایتگر و رشدآفرین
+                  تدوین شده و پیشگیری از رفتارهای مخرب و حفظ منافع جمعی اولویت
+                  مرکز اقتصادی بشکوچ است.
+                </p>
+              </div>
+
+              <!-- Article 10 -->
+              <div class="bg-black/50 p-6 rounded-lg border border-gray-800">
+                <h3 class="text-xl font-bold text-white mb-4 flex items-center">
+                  <span
+                    class="w-8 h-8 ml-2 gold-bg rounded-full flex items-center justify-center mr-3 text-black"
+                    >۱۰</span
+                  >
+                  ماده ۱۰ – تغییرات و بازنگری
+                </h3>
+                <p>
+                  هرگونه تغییر یا اصلاح آیین‌نامه منوط به تصویب شورای ارزیابی
+                  بوده و پس از تصویب برای همه اعضا لازم‌الاجرا است.
+                </p>
+              </div>
+
+              <!-- Final Note -->
+              <div class="bg-black/70 p-6 rounded-lg border border-gray-700">
+                <h3 class="text-xl font-bold text-white mb-4">تبصره پایانی</h3>
+                <p>
+                  این آیین‌نامه برای تمامی اعضا، گروه‌ها و کسب‌وکارهای شریک مرکز
+                  الزام‌آور است و رعایت آن شرط لازم برای ادامه همکاری و
+                  بهره‌مندی از خدمات مرکز می‌باشد.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-16 px-4 bg-black/50 border-t border-gray-800"
+    >
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-white mb-4">
+            <span class="highlight">ارتباط با مرکز اقتصادی بشکوچ</span>
+          </h2>
+          <div class="w-24 h-1 gold-bg mx-auto rounded-full"></div>
+        </div>
+
+        <div class="flex justify-center gap-8">
+          <div
+            style="display: none"
+            class="section-card rounded-xl p-8 shadow-xl"
+          >
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center">
+              <i class="fas fa-paper-plane gold-text ml-2"></i>
+              ارسال پیام
+            </h3>
+
+            <form class="space-y-4">
+              <div>
+                <label for="name" class="block text-gray-300 mb-2"
+                  >نام و نام خانوادگی</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full bg-black/30 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-600"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-gray-300 mb-2"
+                  >آدرس ایمیل</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full bg-black/30 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-600"
+                />
+              </div>
+
+              <div>
+                <label for="subject" class="block text-gray-300 mb-2"
+                  >موضوع</label
+                >
+                <select
+                  id="subject"
+                  class="w-full bg-black/30 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-600"
+                >
+                  <option value="">انتخاب کنید</option>
+                  <option value="membership">درخواست عضویت</option>
+                  <option value="question">سوالات آیین‌نامه</option>
+                  <option value="suggestion">پیشنهادات</option>
+                  <option value="complaint">شکایات</option>
+                  <option value="other">سایر</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-gray-300 mb-2"
+                  >متن پیام</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full bg-black/30 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-600"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full gold-bg hover:bg-yellow-600 text-black px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                ارسال پیام
+                <i class="fas fa-paper-plane mr-2"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="section-card rounded-xl p-8 shadow-xl">
+            <h3 class="text-xl font-bold text-white mb-6 flex items-center">
+              <i class="fas fa-info-circle gold-text ml-2"></i>
+              اطلاعات تماس
+            </h3>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 ml-2 ml-2 rounded-full bg-black/30 flex items-center justify-center mr-4 border gold-border"
+                >
+                  <i class="fas fa-phone-alt gold-text"></i>
+                </div>
+                <div>
+                  <h4 class="text-gray-300 font-medium">شماره همراه</h4>
+                  <p class="text-gray-400">0902-472-2140</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div
+                  class="w-12 h-12 ml-2 ml-2 rounded-full bg-black/30 flex items-center justify-center mr-4 border gold-border"
+                >
+                  <i class="fas fa-clock gold-text"></i>
+                </div>
+                <div>
+                  <h4 class="text-gray-300 font-medium">ساعات کاری</h4>
+                  <p class="text-gray-400">
+                    شنبه تا چهارشنبه: ۸ صبح تا ۵ بعدازظهر
+                  </p>
+                  <p class="text-gray-400">پنجشنبه: ۸ صبح تا ۱۲ ظهر</p>
+                </div>
+              </div>
+
+              <div class="pt-4">
+                <h4 class="text-gray-300 font-medium mb-3">شبکه‌های اجتماعی</h4>
+                <div class="flex space-x-4 space-x-reverse">
+                  <a
+                    href="https://t.me/artafps"
+                    class="w-10 h-10 rounded-full bg-black/30 hover:bg-yellow-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-gray-700"
+                  >
+                    <i class="fab fa-telegram gold-text hover:text-black"></i>
+                  </a>
+                  <a
+                    href="https://t.me/bashkuch_org"
+                    class="w-10 h-10 rounded-full bg-black/30 hover:bg-yellow-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-gray-700"
+                  >
+                    <i class="fab fa-telegram gold-text hover:text-black"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Bashkuch/"
+                    class="w-10 h-10 rounded-full bg-black/30 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-gray-700"
+                  >
+                    <i class="fab fa-github text-blue-400 hover:text-white"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/bashkuch_org"
+                    class="w-10 h-10 rounded-full bg-black/30 hover:bg-red-600 flex items-center justify-center transition-all duration-300 transform hover:scale-110 border border-gray-700"
+                  >
+                    <i
+                      class="fab fa-instagram text-red-400 hover:text-white"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 py-8 px-4 border-t border-gray-800">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex items-center space-x-2 space-x-reverse mb-4 md:mb-0">
+            <div
+              class="w-8 h-8 ml-2 rounded-full gold-bg flex items-center justify-center"
+            >
+              <img src="./123.jpg" alt="bashkuch_org" />
+            </div>
+            <span class="text-white font-medium">مرکز اقتصادی بشکوچ</span>
+          </div>
+
+          <div class="text-gray-400 text-sm text-center md:text-right">
+            <p>تمامی حقوق برای مرکز اقتصادی بشکوچ محفوظ است © 1404</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+
+            // Close mobile menu if open
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      // Full regulations modal
+      const showAllBtn = document.getElementById("show-all-btn");
+      const closeModalBtn = document.getElementById("close-modal-btn");
+      const fullRegulationsModal = document.getElementById(
+        "full-regulations-modal"
+      );
+
+      showAllBtn.addEventListener("click", () => {
+        fullRegulationsModal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      });
+
+      closeModalBtn.addEventListener("click", () => {
+        fullRegulationsModal.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      });
+
+      // Close modal when clicking outside
+      fullRegulationsModal.addEventListener("click", (e) => {
+        if (e.target === fullRegulationsModal) {
+          fullRegulationsModal.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // Form submission
+      const contactForm = document.querySelector("form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+
+          // Here you would typically send the form data to a server
+          // For this example, we'll just show an alert
+          alert(
+            `پیام شما با موفقیت ارسال شد!\n\nنام: ${name}\nایمیل: ${email}\nموضوع: ${subject}\nپیام: ${message}`
+          );
+
+          // Reset form
+          contactForm.reset();
+        });
+      }
+    </script>
+  </body>
+</html>
